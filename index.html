@@ -16,6 +16,9 @@
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free-5.15.4-web/css/fontawesome.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free-5.15.4-web/css/brands.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free-5.15.4-web/css/solid.css" rel="stylesheet">
   <link href="assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
@@ -60,11 +63,11 @@
           <li class="nav-item">
             <a class="nav-link js-scroll" href="#skills">Skills</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link js-scroll" href="#service">Services</a>
-          </li>
+          </li> -->
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#work">Work</a>
+            <a class="nav-link js-scroll" href="#work">Projects</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll" href="#blog">Blog</a>
@@ -153,7 +156,15 @@
             </div>
             <div class="col-lg-6">
               <ul>
-                <li><i class="list-inline-item"></i> <strong>Age:</strong> 22</li>
+                <li><i class="list-inline-item"></i> <strong>Age:</strong> <span id="age"></span>
+                  <script>
+                    function Age() {
+                      var age = new Date().getFullYear() - 1998;
+                      document.getElementById("age").innerHTML = age;
+                    }
+                    Age();
+                  </script>
+                </li>
               </ul>
               <ul>
                 <li><i class="list-inline-item"></i> <strong>Degree:</strong> Diploma</li>
@@ -169,11 +180,17 @@
               </ul>
             </div>
           </div>
+          <div class="container col-lg-11 ">
+            <a class="fab fa-github fa-2x" href="https://github.com/reyzalhildha" target="_blank"></a>
+            <a class="fab fa-linkedin fa-2x" href="https://www.linkedin.com/in/reyzalhildha/" target="_blank"></a>
+          </div>
         </div>
       </div>
+    </div>
 
     </div>
   </section><!-- End About Section -->
+
 
   <!-- ======= My Resume Section ======= -->
   <section id="resume" class="resume resume-mf pt-5 route">
@@ -200,21 +217,35 @@
             <h4>Diploma of Computer Technology</h4>
             <h5>2016 - 2020</h5>
             <p><em>Telkom University, Bandung</em></p>
-            <p>Kuliah di Universitas Telkom melalui jalur CBT dan diterima di jurusan teknik komputer yang sekarang
-              menjadi teknologi komputer</p>
+            <!-- <p>Kuliah di Universitas Telkom melalui jalur CBT dan diterima di jurusan teknik komputer yang sekarang
+              menjadi teknologi komputer</p> -->
+            <p>Studied at Telkom University through the CBT route and was accepted in the computer engineering
+              department which is now computer technology</p>
           </div>
 
           <div class="resume-item">
             <h4>Senior High School</h4>
             <h5>2010 - 2014</h5>
             <p><em>SMAN 1 Padalarang</em></p>
-            <p>Sekolah di SMAN 1 Padalarang mendapatkan ilmu bersosialisasi yang baik dan benar dalam lingkup masyarakat
-            </p>
+            <!-- <p>Sekolah di SMAN 1 Padalarang mendapatkan ilmu bersosialisasi yang baik dan benar dalam lingkup masyarakat
+            </p> -->
+            <p>Schools at SMAN 1 Padalarang get good and correct social skills in the community</p>
           </div>
         </div>
 
         <div class="col-lg-6">
           <h3 class="resume-title">Work Experience</h3>
+          <div class="resume-item">
+            <h4>Mentor of Advance Algorithm and Programming</h4>
+            <h5>9 June 2019 - 3 May 2020</h5>
+            <p><em>Telkom University, Bandung</em></p>
+            <p>
+              <ul>
+                <li>Assessing students in working on practical assignments</li>
+                <li>Help understanding in practical assignments</li>
+              </ul>
+            </p>
+          </div>
           <div class="resume-item">
             <h4>Web Developer</h4>
             <h5>2 January 2019 - 30 April 2019</h5>
@@ -222,21 +253,9 @@
             <p>
               <p></p>
               <ul>
-                <li>Membuat sistem login untuk admin dan pelanggan</li>
-                <li>Membuat sistem booking untuk memesan kamar
-                </li>
-                <li>Membuat Company Profile</li>
-              </ul>
-            </p>
-          </div>
-          <div class="resume-item">
-            <h4>Mentor of Advance Algorithm and Programming</h4>
-            <h5>9 June 2019 - 3 Mei 2020</h5>
-            <p><em>Telkom University, Bandung</em></p>
-            <p>
-              <ul>
-                <li>Menilai mahasiswa dalam pengerjaan tugas praktikum</li>
-                <li>Membantu memahami dalam tugas praktikum</li>
+                <li>Create a login system for admins and customers</li>
+                <li>Create a booking system to book a room</li>
+                <li>Create Company Profile</li>
               </ul>
             </p>
           </div>
@@ -257,9 +276,7 @@
             <h3 class="title-a">
               Skills
             </h3>
-            <p class="subtitle-a">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            </p>
+
             <div class="line-mf"></div>
           </div>
         </div>
@@ -267,8 +284,8 @@
 
 
       <div class="grid-container">
-        <div class="grid-item"><img src="assets/img/css.png" alt="CSS"></div>
-        <div class="grid-item-2"><img src="assets/img/laravel-logolockup-cmyk-red.svg" alt="CSS"></div>
+        <div class="grid-item"><img src="assets/img/css.png" alt="CSS" class="hover"></div>
+        <div class=" grid-item-2"><img src="assets/img/laravel-logolockup-cmyk-red.svg" alt="CSS"></div>
         <div class="grid-item"><img src="assets/img/html.png" alt="CSS"></div>
         <div class="grid-item"><img src="assets/img/javascript.png" alt="CSS"></div>
         <div class="grid-item"><img src="assets/img/mysql.png" alt="CSS"></div>
@@ -450,46 +467,47 @@
   <!-- End Counter Section -->
 
   <!-- ======= Portfolio Section ======= -->
-  <!-- <section id="work" class="portfolio-mf sect-pt4 route">
+  <section id="work" class="portfolio-mf sect-pt4 route">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
           <div class="title-box text-center">
             <h3 class="title-a">
-              Portfolio
+              Projects
             </h3>
-            <p class="subtitle-a">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            </p>
+
             <div class="line-mf"></div>
           </div>
         </div>
       </div>
       <div class="row">
+        <!-- 1  -->
         <div class="col-md-4">
           <div class="work-box">
-            <a href="assets/img/work-1.jpg" data-gall="portfolioGallery" class="venobox">
+            <a href="assets/img/honeytrap2.png" data-gall="portfolioGallery" class="venobox">
               <div class="work-img">
-                <img src="assets/img/work-1.jpg" alt="" class="img-fluid">
+                <img src="assets/img/honeytrap2.png" alt="" class="img-fluid">
               </div>
             </a>
             <div class="work-content">
               <div class="row">
                 <div class="col-sm-8">
-                  <h2 class="w-title">Lorem impsum dolor</h2>
+                  <h2 class="w-title">HoneyTrap</h2>
                   <div class="w-more">
-                    <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
+                    <span class="w-ctegory">Network Security</span> / <span class="w-date">7 May 2020</span>
                   </div>
                 </div>
                 <div class="col-sm-4">
                   <div class="w-like">
-                    <a href="portfolio-details.html"> <span class="ion-ios-plus-outline"></span></a>
+                    <a href="https://github.com/reyzalhildha/honeytrap" target="_blank"> <span
+                        class="ion-ios-plus-outline"></span></a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- 2 -->
         <div class="col-md-4">
           <div class="work-box">
             <a href="assets/img/work-2.jpg" data-gall="portfolioGallery" class="venobox">
@@ -514,6 +532,7 @@
             </div>
           </div>
         </div>
+        <!-- 3 -->
         <div class="col-md-4">
           <div class="work-box">
             <a href="assets/img/work-3.jpg" data-gall="portfolioGallery" class="venobox">
@@ -538,6 +557,7 @@
             </div>
           </div>
         </div>
+        <!-- 4 -->
         <div class="col-md-4">
           <div class="work-box">
             <a href="assets/img/work-4.jpg" data-gall="portfolioGallery" class="venobox">
@@ -562,6 +582,7 @@
             </div>
           </div>
         </div>
+        <!-- 5 -->
         <div class="col-md-4">
           <div class="work-box">
             <a href="assets/img/work-5.jpg" data-gall="portfolioGallery" class="venobox">
@@ -586,6 +607,7 @@
             </div>
           </div>
         </div>
+        <!-- 6 -->
         <div class="col-md-4">
           <div class="work-box">
             <a href="assets/img/work-6.jpg" data-gall="portfolioGallery" class="venobox">
@@ -613,7 +635,7 @@
 
       </div>
     </div>
-  </section> -->
+  </section>
   <!-- End Portfolio Section -->
 
 
@@ -866,6 +888,7 @@
   <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/js/age.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
@@ -909,7 +932,8 @@
 
     function mysql() {
       full = !full;
-      document.getElementById("mysqlcontainer").style.backgroundColor = full ? "#3ebffa" : "transparent";
+      document.getElementById("mysqlcontainer").style.backgroundColor = full ? "#3ebffa" :
+        "transparent";
     }
   </script>
 </body>

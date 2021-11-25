@@ -210,10 +210,13 @@ a:hover {
   }
 }
 
+
 /*------/ Grid /------*/
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, 1fr);
+
+  /* grid-template-columns: auto auto auto; */
   /* background-color: #2196F3; */
   padding: 10px;
 }
@@ -224,15 +227,44 @@ a:hover {
   padding: 20px;
   font-size: 30px;
   text-align: center;
-  width: 100%;
+  max-width: 100%;
 }
 
 .grid-item img {
-  width: 40%;
+  width: 50%;
+  height: auto;
 }
 
 .grid-item-2 img {
   width: 100%;
+  height: auto;
+}
+
+.grid-item img:hover {
+  transform: scale(1.2);
+}
+
+.grid-item-2 img:hover {
+  transform: scale(1.2);
+}
+
+
+@media (min-width: 0px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 708px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 963px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 
