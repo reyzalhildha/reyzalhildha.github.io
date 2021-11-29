@@ -210,6 +210,12 @@ a:hover {
   }
 }
 
+/* Dark Mode */
+
+body.section.dark {
+  background-color: #1f1f1f;
+  color: #fff;
+}
 
 /*------/ Grid /------*/
 .grid-container {
