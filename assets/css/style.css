@@ -218,6 +218,7 @@ body.section.dark {
 }
 
 /*------/ Grid /------*/
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -225,6 +226,7 @@ body.section.dark {
   /* grid-template-columns: auto auto auto; */
   /* background-color: #2196F3; */
   padding: 10px;
+  
 }
 
 .grid-item {
